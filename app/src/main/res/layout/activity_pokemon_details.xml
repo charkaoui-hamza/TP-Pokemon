@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PokemonDetails"
+    tools:ignore="MissingClass">
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="-5dp"
+            android:background="@android:color/darker_gray">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="186dp"
+                android:layout_height="170dp"
+
+                app:layout_constraintBottom_toTopOf="@+id/description"
+                app:layout_constraintEnd_toStartOf="@+id/poids"
+                app:layout_constraintHorizontal_bias="0.179"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.383"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="left">
+
+                <TextView
+                    android:id="@+id/taille"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="TextView"
+                    android:textColor="@android:color/white"
+                    android:textSize="25dp"
+                    tools:layout_editor_absoluteX="217dp"
+                    tools:layout_editor_absoluteY="77dp" />
+
+                <TextView
+                    android:id="@+id/poids"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@android:color/white"
+                    android:textSize="25dp"
+                     />
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="TextView"
+                    android:textColor="@android:color/white"
+                    android:textSize="25dp"
+                     />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Evolution"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pokeEvolution"
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="372dp"
+        tools:listitem="@layout/item_pokemon"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
